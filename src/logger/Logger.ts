@@ -2,8 +2,8 @@ import { LoggerOptions } from "../typings/LoggerOptions";
 import colors from "./colors";
 
 export default class Logger {
-    name?: string;
-    constructor(options?: LoggerOptions) {
+    private readonly name?: string;
+    public constructor(options?: LoggerOptions) {
         this.name = options?.name;
     }
 
@@ -11,7 +11,7 @@ export default class Logger {
     [Date] [MemUsed][Name] [Type] <value>
     */
 
-    base(type: string, value: string, color: string) {
+    private base(type: string, value: string, color: string) {
         const used_mem: number = process.memoryUsage().heapUsed / 1024 / 1024;
 
         let outputBuilder = "";
@@ -27,13 +27,15 @@ export default class Logger {
         return console.log(outputBuilder, value, colors.RESET);
     }
 
-    log(value: string) {
+    public log(value: string) {
         return this.base("INFO", value, colors.GREEN);
     }
-    warn(value: string) {
+
+    public warn(value: string) {
         return this.base("WARN", value, colors.YELLOW);
     }
-    error(value: string | Error) {
-        return this.base("ERR", value instanceof Error ? value.toString() : value, colors.RED);
+
+    public error(value: string | Error) {
+        return this.base("ERR", value instanceof Error ? value.message : value, colors.RED);
     }
 }

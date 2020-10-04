@@ -15,10 +15,15 @@
         "linebreak-style": "off",
         "prefer-template": "warn",
         "unused-imports/no-unused-imports": "warn",
-        "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-unused-vars": "warn"
+        "@typescript-eslint/naming-convention": "off",
+        "prettier/prettier": [
+            "warn",
+            {
+                "endOfLine": "auto"
+            }
+        ]
     },
     "overrides": [
         {

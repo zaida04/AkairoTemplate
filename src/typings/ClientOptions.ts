@@ -1,4 +1,4 @@
 export interface ClientOptions {
-    dbEnv: Record<string, any>;
+    dbEnv: Record<string, string>;
     defaultPrefix: string;
 }

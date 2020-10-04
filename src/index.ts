@@ -8,9 +8,9 @@ if (!process.env.DEFAULTPREFIX) throw new Error("Must provide a prefix!");
 if (!process.env.TOKEN) throw new Error("Must provide a token");
 
 const options: ClientOptions = {
-    dbEnv: DBEnviroment["development"],
+    dbEnv: DBEnviroment.development,
     defaultPrefix: process.env.DEFAULTPREFIX,
 };
 
 const BotClient = new Client(options);
-BotClient.login(process.env.TOKEN);
+void BotClient.login(process.env.TOKEN);

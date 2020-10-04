@@ -1,15 +1,17 @@
 import knex, { TableBuilder } from "knex";
 import { AkairoClient } from "discord-akairo";
+import { DatabaseEnviroment } from "../typings/DatabaseEnviroment";
 
 export default class DatabaseManager {
-    api: knex;
-    client: AkairoClient;
+    public api: knex;
+    private readonly client: AkairoClient;
 
-    constructor(dbENV: any, client: AkairoClient) {
+    public constructor(dbENV: DatabaseEnviroment, client: AkairoClient) {
         this.api = knex(dbENV);
         this.client = client;
     }
-    async init() {
+
+    private async init() {
         await this.initTable(this.api, "settings", (table: TableBuilder) => {
             table.increments("guild_id");
             table.string("prefix");
