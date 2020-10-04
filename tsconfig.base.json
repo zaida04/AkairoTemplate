@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES6",
     "module": "CommonJS",
-    "allowJs": true,
-    "checkJs": true,
     "outDir": "./dist",
     "removeComments": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "downlevelIteration": true,
     "strict": true,
     "strictNullChecks": true,
     "alwaysStrict": true,
-    "noImplicitAny": true,
     "resolveJsonModule": true,
     "declaration": false,
     "noFallthroughCasesInSwitch": true,
@@ -19,6 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "isolatedModules": true,
     "forceConsistentCasingInFileNames": true
   },
   "include": [

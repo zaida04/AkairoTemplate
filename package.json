@@ -5,10 +5,9 @@
   "main": "dist/src/index.js",
   "private": true,
   "scripts": {
-    "start": "npx ts-node src/index.ts --project tsconfig.base.json",
+    "start": "npm run build && node dist/src/index.js",
     "build": "npx tsc --project ./tsconfig.base.json",
-    "lint": "npx eslint src/ --fix",
-    "start::build": "npm run build && node dist/src/index.js"
+    "lint": "npx eslint src/ --fix"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,8 @@
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
     "eslint": "^7.8.1",
+    "eslint-config-marine": "^7.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-unused-imports": "^0.1.3",
@@ -39,7 +40,6 @@
     "knex": "^0.21.5",
     "moment": "^2.29.0",
     "mysql": "^2.18.1",
-    "typescript": "^4.0.2",
-    "ts-node": "^9.0.0"
+    "typescript": "^4.0.2"
   }
 }

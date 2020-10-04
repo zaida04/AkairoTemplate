@@ -5,6 +5,7 @@
         "ecmaVersion": 11
     },
     "extends": [
+        "marine/prettier/node",
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
@@ -13,13 +14,11 @@
     "rules": {
         "linebreak-style": "off",
         "prefer-template": "warn",
-        "no-unused-vars": "off",
         "unused-imports/no-unused-imports": "warn",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-unused-vars": "warn",
-        "@typescript-eslint/ban-ts-comment": "off"
+        "@typescript-eslint/no-unused-vars": "warn"
     },
     "overrides": [
         {
