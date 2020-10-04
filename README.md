@@ -14,8 +14,7 @@ This is my personal structure template for Akairo based TS Discord.js Bots. Come
 `src/core/structures/**` - Custom/Extended Structures.
 
 ## Scripts  
-`npm start` - Run the bot using ts-node  
-`npm run start::build` - Compile the bot, and run the compiled source.  
+`npm start` - Compile and run the bot
 `npm run lint` - Lint the TS of the bot  
 `npm run build` - Compile the bot  
 
