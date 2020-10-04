@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "./dist",
+    "removeComments": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "node_modules/**"
+  ]
+}
