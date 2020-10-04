@@ -1,12 +1,11 @@
-import knex, { TableBuilder } from "knex";
+import knex, { Config, TableBuilder } from "knex";
 import { AkairoClient } from "discord-akairo";
-import { DatabaseEnviroment } from "../typings/DatabaseEnviroment";
 
 export default class DatabaseManager {
     public api: knex;
     private readonly client: AkairoClient;
 
-    public constructor(dbENV: DatabaseEnviroment, client: AkairoClient) {
+    public constructor(dbENV: Config, client: AkairoClient) {
         this.api = knex(dbENV);
         this.client = client;
     }

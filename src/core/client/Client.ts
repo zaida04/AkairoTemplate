@@ -5,6 +5,7 @@ import { ClientOptions } from "../../typings/ClientOptions";
 import "../../typings/Akairo";
 import "../../typings/Guild";
 import Logger from "../../logger/Logger";
+import DatabaseManager from "../../database/DatabaseManager";
 
 export default class Client extends AkairoClient {
     public constructor(config: ClientOptions) {
@@ -20,6 +21,7 @@ export default class Client extends AkairoClient {
 
         this.config = config;
         this.Logger = new Logger();
+        this.db = new DatabaseManager(config.dbEnv, this);
 
         this.commandHandler = new CommandHandler(this, {
             directory: join(__dirname, "/../commands/"),

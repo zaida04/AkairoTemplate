@@ -1,4 +1,6 @@
+import { Config } from "knex";
+
 export interface ClientOptions {
-    dbEnv: Record<string, string>;
+    dbEnv: Config;
     defaultPrefix: string;
 }
