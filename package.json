@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "npx ts-node src/index.ts --project tsconfig.base.json",
-    "build": "npx tsc --build tsconfig.base.json",
+    "build": "npx tsc",
     "lint": "npx eslint src/ --fix",
     "start::build": "npm run build && node dist/src/index.js"
   },
