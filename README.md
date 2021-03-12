@@ -6,9 +6,9 @@ This is my personal structure template for Akairo based TS Discord.js Bots. Come
 
 ## Structure  
 `src/core/client/Client.ts` - Main Akairo Client.  
-`src/core/index.ts` - Main script that runs the client and related packages.  
+`src/index.ts` - Main script that runs the client and related packages.  
 `src/core/listeners/**` - Listeners for the Client.  
-`src/core/commands/**` - Non Packaged commands for the client.  
+`src/core/commands/**` - Non packaged commands for the client.  
 `src/core/inhibitors/**` - Inhibitors for the Client.  
 `src/core/managers/**` - Managers for structures.
 `src/core/structures/**` - Custom/Extended Structures.

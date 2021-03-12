@@ -1,28 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "outDir": "./dist",
-    "removeComments": true,
-    "importHelpers": false,
-    "downlevelIteration": true,
     "strict": true,
-    "strictNullChecks": true,
     "alwaysStrict": true,
-    "resolveJsonModule": true,
-    "declaration": false,
-    "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "pretty": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "lib": [
+      "ESNext",
+    ],
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"],
+    "sourceMap": true,
+    "incremental": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "isolatedModules": true,
-    "forceConsistentCasingInFileNames": true
+    "allowSyntheticDefaultImports": true,
+    "noEmitHelpers": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "outDir": "./dist"
   },
   "include": [
-    "./**/*.ts"
+    "./src/**/*.ts"
   ],
-  "exclude": [
-    "node_modules/**"
-  ]
+  "exclude": ["dist/**", "node_modules/**"]
 }
