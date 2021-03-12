@@ -1,8 +1,16 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
+    "ignorePatterns": [
+        "__tests__/**",
+        "node_modules/**",
+        "dist/**",
+        "types/**",
+        "*.js"
+    ],
     "parserOptions": {
-        "ecmaVersion": 11
+        "ecmaVersion": 11,
+        "project": "./tsconfig.json"
     },
     "extends": [
         "marine/prettier/node",
@@ -14,17 +22,28 @@
     "rules": {
         "linebreak-style": "off",
         "prefer-template": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "warn", 
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
         "unused-imports/no-unused-imports": "warn",
+        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/no-base-to-string": "off",
+        "@typescript-eslint/no-misused-promises": "off",
+        "no-duplicate-imports": "off",
         "prettier/prettier": [
             "warn",
             {
                 "endOfLine": "auto"
             }
-        ],
-        "no-duplicate-imports": "warn"
+        ]
     },
     "overrides": [
         {

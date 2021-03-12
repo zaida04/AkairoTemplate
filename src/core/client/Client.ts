@@ -15,7 +15,7 @@ export default class Client extends AkairoClient {
             {
                 disableMentions: "everyone",
                 partials: ["MESSAGE", "CHANNEL", "REACTION"],
-            }
+            },
         );
 
         this.config = config;
